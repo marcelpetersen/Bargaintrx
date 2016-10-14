@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>Notifications</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="notifications">
+
+<div *ngIf="loading" class="spinner-container">
+        <ion-spinner></ion-spinner>
+</div>
+ 
+<ion-list>
+
+<ion-card *ngFor="let notification of notificationList">
+  <ion-card-header><strong>{{notification.title}}</strong></ion-card-header>
+  <ion-card-content>
+   {{notification.message}}
+
+  </ion-card-content>
+
+   <ion-item no-lines>
+      <ion-note item-right>{{notification.created}}</ion-note>
+   </ion-item>
+</ion-card>
+
+  </ion-list>
+
+</ion-content>

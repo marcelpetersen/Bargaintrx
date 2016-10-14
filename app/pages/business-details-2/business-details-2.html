@@ -1,0 +1,88 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>{{businessDetails.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="content">
+
+<ion-card>
+
+  <div style="position: relative">
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    
+    <button fab fab-right fab-top class="fab-map" (click)="goToBusinessRoute()">
+      <ion-icon name='map'></ion-icon>
+  </button>
+  </div>
+
+  <ion-item>
+    <h1>{{businessDetails.name}}</h1>
+  </ion-item>
+
+  <ion-item>
+    <p>{{businessDetails.address}}</p>
+    <p>{{businessDetails.city}}</p>
+  </ion-item>
+
+  <ion-item>
+    <button primary clear item-right>
+      {{businessDetails.distance}} Km
+     <ion-icon name="pin"></ion-icon>
+    </button>
+  </ion-item>
+
+</ion-card>
+
+<ion-card>
+
+<ion-grid>
+  <ion-row>
+    <ion-col width-90 text-center> Popular Hours </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col width-50 text-center> Day of week</ion-col>
+    <ion-col width-50 text-center> Hours</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col width-50 text-center> Monday</ion-col>
+    <ion-col width-50 text-center> 10:00 to 1:00</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col width-50 text-center>Tuesday</ion-col>
+    <ion-col width-50 text-center> 10:00 to 1:00</ion-col>
+  </ion-row>
+  
+</ion-grid>
+
+</ion-card>
+
+<ion-card>
+
+ <ion-list>
+    
+    <ion-list-header>AMINITIES</ion-list-header>
+    
+    <ion-item padding>
+      <h2>Aircooler</h2>
+    </ion-item>
+    
+     <ion-item padding>
+      <h2>Tv</h2>
+    </ion-item>
+
+    <ion-item padding>
+      <h2>Wifi</h2>
+    </ion-item>
+
+ </ion-list> 
+
+</ion-card>
+
+</ion-content>

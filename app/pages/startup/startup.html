@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>Welcome to Bargaintrx</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="startup">
+
+
+  <button block (click)="goToFacebookSignup()"> <ion-icon name="facebook"></ion-icon> SignUp using Facebook</button>
+  <button block (click)="goToEmailSignup()"> <ion-icon name="mail"></ion-icon> SignUp using email</button> 
+  <button block clear (click)="goToLogin()" id="login" >already have account ? Login</button>
+
+</ion-content>

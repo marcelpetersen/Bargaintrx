@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>
+      Create an Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="signup">
+
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+      <ion-input formControlName="surname" type="text"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item class="top" >
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender" formControlName="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="top">
+      <ion-label>Birth Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" formControlName="dob" [(ngModel)]="dob"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Phone no</ion-label>
+      <ion-input formControlName="phone" type="tel"></ion-input>
+    </ion-item>
+
+
+    <ion-segment [(ngModel)]="type" formControlName="type" class="top">
+      <ion-segment-button value="1">
+        Business Owner
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        Customer
+      </ion-segment-button>
+    </ion-segment>
+
+    <button block type="submit">Create an Account</button>
+
+  </form>
+   
+    
+
+
+    
+
+
+
+</ion-content>

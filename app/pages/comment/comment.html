@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Comment</ion-title>
+    <ion-buttons end>
+        <button (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+ <ion-item >
+   <ion-label floating>Description</ion-label>
+   <ion-textarea [(ngModel)]="comment"></ion-textarea>
+ </ion-item>
+
+  <button (click)="saveComment()" primary full>Save Comment</button> 
+
+
+</ion-content>

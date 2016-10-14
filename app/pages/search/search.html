@@ -1,0 +1,53 @@
+<ion-header>
+ 
+</ion-header>
+
+<ion-content class="search">
+
+    <ion-searchbar placeholder="I am looking for"></ion-searchbar>
+ 
+  <ion-list>
+ <ion-list-header>Categories</ion-list-header>
+    <button ion-item *ngFor="let cat of categories" (click)=" goToAroundMeWithFilter(cat.category)">
+      <ion-icon [name]="cat.icon" item-left primary></ion-icon>
+      {{cat.category}}
+    </button>
+  <ion-item no-lines tappable (click)="goToCategories()">
+    <a item-right>View More</a>
+  </ion-item>
+  </ion-list>
+
+ 
+  
+
+ <div *ngIf="loading" class="spinner-container">
+        <ion-spinner></ion-spinner>
+</div>
+
+ <ion-list *ngIf="businessDatalist.length > 0">
+     <ion-list-header>Around me</ion-list-header>
+  
+  <ion-item-sliding *ngFor="let business of businessDatalist" >
+      <ion-item tappable (click)="goToBusinessDetails1(business)">
+        <ion-thumbnail item-left>
+      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png">
+    </ion-thumbnail>
+    <h2>{{business.name}}</h2>
+    <h4>{{business.address}}</h4>
+    <p item-right>{{business.distance}} Km</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button primary icon-left (click)="saveBusiness(business)">
+          <ion-icon name="star"></ion-icon>
+          Save
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+    <ion-item no-lines tappable (click)="goToAroundMe()">
+    <a item-right>View More</a>
+  </ion-item>
+</ion-list>
+  
+
+</ion-content>

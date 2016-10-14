@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>All Comments</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-list *ngIf="comments">
+    <ion-item *ngFor="let comment of comments">
+      <h2 tappable>{{comment.name}}</h2>
+       <p>{{comment.comment}}</p>
+      <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>{{comment.thumbsup}}</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-down'></ion-icon>
+        <div>{{comment.thumbsdown}}</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        {{comment.time}}
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+    </ion-item>
+ 
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>Business Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="business-details-3">
+
+  <ion-scroll scrollX="true">
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+    <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-paris.png" />
+   
+  </ion-scroll>
+  <ion-item no-lines tappable (click)="goToPhotoGallery()">
+    <a item-right>View More</a>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>{{businessDetails.name}}</ion-item>
+    <ion-item>{{businessDetails.email}}</ion-item>
+    <ion-item>{{businessDetails.phone}}</ion-item>
+    <ion-item>Website</ion-item>
+    <ion-item>{{businessDetails.address}}</ion-item>
+    <ion-item>{{businessDetails.city}}</ion-item>
+    <ion-item>{{businessDetails.state}}</ion-item>
+    <ion-item>{{businessDetails.pin}}</ion-item>
+
+  </ion-list>
+
+</ion-content>

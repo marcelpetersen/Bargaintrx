@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Its Me</ion-title>
+    <ion-buttons end>
+      <button (click)="logOut()"><ion-icon name="log-out"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="its-me">
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-33>
+        <ion-thumbnail>
+         <img src="http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png">
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col width-67>
+        <div class="stats cf">
+          <a href="#" class="stat">
+            <strong>1,250</strong> comments
+          </a>
+          <a href="#" class="stat">
+            <strong>60</strong> ratings
+          </a>
+          <a href="#" class="stat">
+            <strong>117</strong> followers
+          </a>
+        </div>
+
+        <button full primary clear>Follow</button>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+
+  <div padding>
+    <h2>Details</h2>
+    <p>Addresss</p>
+    <p>Addresss</p>
+  <button primary class="center" clear>Add your business</button>
+      
+  </div>
+  <ion-list>
+    <ion-list-header>Opinion for others</ion-list-header>
+    <ion-item tappable>
+      <ion-thumbnail item-left>
+       <img src="http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>BusinessName</h2>
+      <p>address</p>
+      <p><strong>Comment: </strong>this is commnet</p>
+
+    </ion-item>
+    <ion-item no-lines tappable>
+      <a item-right>View More</a>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

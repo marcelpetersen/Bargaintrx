@@ -1,0 +1,16 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+
+    <ion-searchbar placeholder="I am looking for" [(ngModel)]="searchTerm" (ionInput)="setFilteredCategories()"></ion-searchbar>
+
+  <ion-list>
+ <ion-list-header>Categories</ion-list-header>
+    <button ion-item *ngFor="let category of categories" (click)="goToAroundMeWithFilter(category.category)">
+      <ion-icon [name]="category.icon" primary item-left></ion-icon>
+      {{category.category}}
+    </button>
+  </ion-list>
+
+</ion-content>

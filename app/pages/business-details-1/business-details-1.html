@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>{{ businessDetails.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="business-details-1">
+
+
+<ion-card>
+<div padding>
+<img src="http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png" class="center" (click)="goToBusinessDetails3()"/>
+</div>
+
+<div class="button-bar">
+
+<div class="bar-button" tappable (click)="addToList()">
+  Save
+</div>
+
+<div class="bar-button" >
+Check in
+</div>
+
+<div class="bar-button" tappable (click)="rateBusiness()">
+  Rate
+</div>
+
+<div class="bar-button" tappable (click)="commentBusiness()">
+  Comment
+</div>
+
+</div>
+<ion-item  no-lines>
+  
+    <h2>{{ businessDetails.name}}</h2>
+    <p>{{ businessDetails.address}}</p>
+
+</ion-item>
+      
+  <ion-item  no-lines>
+    <a item-left (click)="goToBusinessDetails2()">More info</a>
+    <button clear item-right>
+      {{ businessDetails.distance}} Km
+      <ion-icon name="pin"></ion-icon>
+    </button>
+  </ion-item>
+  
+</ion-card>                  
+
+<ion-card>
+  <ion-list *ngIf="comments">
+    <ion-list-header>What people say about business</ion-list-header>
+
+    <ion-item padding tappable *ngFor="let comment of comments">
+      <h2>{{comment.name}}</h2>
+      <p>{{comment.comment}}</p>
+      <ion-note item-right>{{comment.time}}</ion-note>
+    </ion-item>
+    <ion-item no-lines tappable (click)="goToComments()">
+      <a item-right primary>View More</a>
+  </ion-item>
+  </ion-list>
+   
+  </ion-card>
+</ion-content>

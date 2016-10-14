@@ -1,0 +1,28 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="around-me" >
+
+    <ion-searchbar placeholder="I am looking for" [(ngModel)]="searchTerm" (ionInput)="filterBusniessDetails()"></ion-searchbar>
+
+
+
+<div *ngIf="loading" class="spinner-container">
+        <ion-spinner></ion-spinner>
+</div>
+
+ <ion-list *ngIf="businessDatalist.length > 0">
+     <ion-list-header>Around me</ion-list-header>
+  <ion-item *ngFor="let business of businessDatalist" tappable (click)="goToBusinessDetails1(business)">
+    <ion-thumbnail item-left>
+      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png">
+    </ion-thumbnail>
+    <h2>{{business.name}}</h2>
+    <h4>{{business.address}}</h4>
+    <p item-right>{{business.distance}} Km</p>
+  </ion-item>
+</ion-list>
+
+  
+
+</ion-content>

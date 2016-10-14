@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Rate</ion-title>
+    <ion-buttons end>
+        <button (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+ <ion-item>
+        <ion-label floating>Rating</ion-label>
+        <ion-input type="number" [(ngModel)]="rating"></ion-input>
+  </ion-item>
+
+  <button (click)="saveRating()" primary full>Rate</button> 
+
+
+</ion-content>
